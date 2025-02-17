@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KNN Model Training</title>
+    <style>
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input, select { width: 100%; padding: 8px; margin-bottom: 10px; }
+        button { padding: 10px 20px; background: #007bff; color: white; border: none; }
+        #response { margin-top: 20px; padding: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>KNN Model Training Interface</h1>
+
+        <div class="form-group">
+            <label>Dataset Upload:</label>
+            <input type="file" id="dataset" accept=".csv">
+        </div>
+
+        <form id="modelForm">
+            <div class="form-group">
+                <label>Number of Neighbors:</label>
+                <input type="number" name="n_neighbors" value="5">
+            </div>
+
+            <div class="form-group">
+                <label>Metric:</label>
+                <select name="metric">
+                    <option value="euclidean">Euclidean</option>
+                    <option value="manhattan">Manhattan</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Test Size:</label>
+                <input type="number" name="test_size" value="0.2" step="0.1" min="0.1" max="0.5">
+            </div>
+
+            <button type="submit">Train Model</button>
+        </form>
+
+        <div id="response"></div>
+    </div>
+
+    
+    
+</body>
+</html>
